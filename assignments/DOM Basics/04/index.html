@@ -12,5 +12,22 @@
       <li>Favorites: <span id="favorites"></span></li>
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
+
+    <script>
+      //1 & 2.
+      var bodyStyle = document.body.style;
+      bodyStyle.fontFamily = "Arial, sans-serif";
+      //3.
+      document.getElementById("nickname").innerText = "Anupam";
+      document.getElementById("favorites").innerText = "Pizza";
+      document.getElementById("hometown").innerText = "India";
+      //4.
+      document.querySelectorAll("li").forEach(value => value.className = "listitem");
+      //5.
+      var image = document.createElement('img');
+      image.src = './assets/pic.jpg';
+      document.body.append(image);
+
+    </script>
   </body>
 </html>

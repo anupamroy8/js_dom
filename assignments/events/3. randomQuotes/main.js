@@ -2,8 +2,6 @@ var quotes;
 
 // Write your code here
 
-
-
 quotes = [
     {
         "quoteAuthor": "Thomas Edison",
@@ -314,3 +312,24 @@ quotes = [
         "quoteText": "Great talent finds happiness in execution."
     }
 ];
+
+var div = document.querySelector('div');
+
+// function getRandomInt() {
+//     return Math.floor(Math.random() * Math.floor(77));
+//   };
+function abc() {
+  return (quotes[Math.floor(Math.random() * Math.floor(77))].quoteText + " - by " + quotes[Math.floor(Math.random() * Math.floor(77))].quoteAuthor);
+};
+
+var str = abc();
+
+document.body.addEventListener("keyup", function(e) {
+    if(e.keyCode === 32) {
+        var str = abc();
+    div.textContent = str;
+    }
+});
+
+div.textContent=str;
+
